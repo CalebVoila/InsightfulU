@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+    <style>
+       
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    .tooltip[data-tooltip-placement="top"] .tooltiptext {
+    top: -225%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+        
+        .tooltip[data-tooltip-placement="right"] .tooltiptext {
+            left: 125%;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .tooltip[data-tooltip-placement="bottom"] .tooltiptext {
+            top: 125%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .tooltip[data-tooltip-placement="left"] .tooltiptext {
+            right: 125%;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        
+        function createTooltip(element, text, placement) {
+            const tooltipContainer = document.createElement('div');
+            tooltipContainer.className = 'tooltiptext';
+            tooltipContainer.textContent = text;
+
+            element.appendChild(tooltipContainer);
+            element.setAttribute('data-tooltip-placement', placement);
+        }
+
+        
+        const tooltipTop = document.createElement('div');
+        tooltipTop.className = 'tooltip';
+        tooltipTop.textContent = 'Tooltip on top';
+        createTooltip(tooltipTop, 'This is a tooltip on top', 'top');
+        document.body.appendChild(tooltipTop);
+
+        const tooltipRight = document.createElement('div');
+        tooltipRight.className = 'tooltip';
+        tooltipRight.textContent = 'Tooltip on right';
+        createTooltip(tooltipRight, 'This is a tooltip on right', 'right');
+        document.body.appendChild(tooltipRight);
+
+        const tooltipBottom = document.createElement('div');
+        tooltipBottom.className = 'tooltip';
+        tooltipBottom.textContent = 'Tooltip on bottom';
+        createTooltip(tooltipBottom, 'This is a tooltip on bottom', 'bottom');
+        document.body.appendChild(tooltipBottom);
+
+        const tooltipLeft = document.createElement('div');
+        tooltipLeft.className = 'tooltip';
+        tooltipLeft.textContent = 'Tooltip on left';
+        createTooltip(tooltipLeft, 'This is a tooltip on left', 'left');
+        document.body.appendChild(tooltipLeft);
+    </script>
+
+</body>
+</html>
