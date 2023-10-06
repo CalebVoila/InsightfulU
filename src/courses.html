@@ -8,22 +8,44 @@
     <title>Document</title>
 </head>
 <style>
- 
+
+    /* Your existing styles */
+
     .icon-link-hover:hover {
         color: blue !important;
-        
     }
-    
+
     footer a {
         text-decoration: none;
-        color:#bdb8b8;
+        color: #bdb8b8;
     }
-    
+
     .btn-subscribe:active {
-        background-color: #dc3545; 
-        color:gray; 
-        border-color: #dc3545; 
+        background-color: #dc3545;
+        color: gray;
+        border-color: #dc3545;
     }
+
+    /* New styles for the course sections */
+
+    #it-courses,
+    #non-it-courses {
+        padding: 50px 0;
+    }
+
+    .course-section h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .course-section .card {
+        margin-bottom: 2rem;
+    }
+
+    .course-section .row [class*="col-"] {
+        margin-bottom: 2rem;
+    }
+
 </style>
 <body>
 
@@ -39,7 +61,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Home</a>
+                            <a href="./bootstrap.html" class="nav-link text-white">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="./courses.html" class="nav-link text-white">Courses</a>
@@ -60,7 +82,115 @@
 
     </header>
     <main>
+        <!-- Hero Section -->
+        <section class="hero bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1>Welcome to our Learning Portal</h1>
+                <p>Explore a wide range of IT and non-IT courses to enhance your skills.</p>
+            </div>
+        </section>
 
+        <!-- IT Courses Section -->
+        <section id="it-courses" class="bg-light py-5 course-section">
+            <div class="container">
+                <h2 class="text-center mb-4">IT Courses</h2>
+                <div class="row">
+                    <!-- Repeat this block for each IT course -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/it-course-image.jpg" class="card-img-top" alt="IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">IT Course Title 1</h5>
+                                <p class="card-text">Description of the IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/it-course-image.jpg" class="card-img-top" alt="IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">IT Course Title 1</h5>
+                                <p class="card-text">Description of the IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/it-course-image.jpg" class="card-img-top" alt="IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">IT Course Title 1</h5>
+                                <p class="card-text">Description of the IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/it-course-image.jpg" class="card-img-top" alt="IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">IT Course Title 1</h5>
+                                <p class="card-text">Description of the IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of IT course block -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Non-IT Courses Section -->
+        <section id="non-it-courses" class="py-5 course-section">
+            <div class="container">
+                <h2 class="text-center mb-4">Non-IT Courses</h2>
+                <div class="row">
+                    <!-- Repeat this block for each Non-IT course -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/non-it-course-image.jpg" class="card-img-top" alt="Non-IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Non-IT Course Title 1</h5>
+                                <p class="card-text">Description of the non-IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/non-it-course-image.jpg" class="card-img-top" alt="Non-IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Non-IT Course Title 1</h5>
+                                <p class="card-text">Description of the non-IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/non-it-course-image.jpg" class="card-img-top" alt="Non-IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Non-IT Course Title 1</h5>
+                                <p class="card-text">Description of the non-IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="path/to/non-it-course-image.jpg" class="card-img-top" alt="Non-IT Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Non-IT Course Title 1</h5>
+                                <p class="card-text">Description of the non-IT course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Non-IT course block -->
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-dark text-light py-5">
